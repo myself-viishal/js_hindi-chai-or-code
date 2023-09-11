@@ -18,3 +18,6 @@ let life
 
 // null is a object
 console.log(typeof life)
+
+
+

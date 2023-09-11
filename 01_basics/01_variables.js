@@ -9,4 +9,4 @@ console.table([accountId, accountEmail , accountPassword, accountCity])
 // accountId = 88888888 // not possible broo
 accountEmail = '3953@gmail.com'
 accountPassword = "12@3"
-accountCity = "jamtara"
+accountCity = "jamtara" 
