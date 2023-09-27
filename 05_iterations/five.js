@@ -211,17 +211,33 @@ let employee = {
     ],
     message: "Successfully! All records has been fetched.",
 };
-let employDataLength =(employee.data).length;
+// let employDataLength =(employee.data).length;
+// let id = Math.floor(Math.random() * employDataLength);
+// function getEmployee(inputId) {
+//     let employData = employee.data;
+//     let employDataLength =employData.length;
+//     employData.forEach((employ) => {
+//         if (inputId == employ.id) {
+//             console.log(
+//                 `ID: ${employ.id} \nName: ${employ.employee_name} \nSalary: ${employ.employee_salary} \nAge: ${employ.employee_age}`
+//             );
+//         }
+//     });
+// }
+// getEmployee(id);
+
+// Another method
+
+let employDataLength = employee.data.length;
 let id = Math.floor(Math.random() * employDataLength);
 function getEmployee(inputId) {
     let employData = employee.data;
-    let employDataLength =employData.length;
-    employData.forEach((employ) => {
-        if (inputId == employ.id) {
-            console.log(
-                `ID: ${employ.id} \nName: ${employ.employee_name} \nSalary: ${employ.employee_salary} \nAge: ${employ.employee_age}`
-            );
-        }
+    let employDataLength = employData.length;
+    let employ = employData.filter((i) => {
+        return i.id == inputId;
     });
+    console.log(
+        `ID: ${employ[0].id} \nName: ${employ[0].employee_name} \nSalary: ${employ[0].employee_salary} \nAge: ${employ[0].employee_age}`
+    );
 }
 getEmployee(id);
