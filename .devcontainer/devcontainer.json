@@ -21,7 +21,8 @@
 				"esbenp.prettier-vscode",
 				"vscode-icons-team.vscode-icons",
 				"wayou.vscode-todo-highlight",
-				"PKief.material-icon-theme"
+				"PKief.material-icon-theme",
+				"ritwickdey.LiveServer"
 			],
 			"settings": {
 				"editor.fontSize": 18,
