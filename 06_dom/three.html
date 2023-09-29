@@ -21,26 +21,38 @@
     </style>
 </head>
 <body>
-    
+    <img src="" alt="">
 </body>
 <script>
     'use strict'
+
+    let src =  "https://source.unsplash.com/random/?train,day";
+
+
+
     const nameArr = ["One", 'Two', 'Three', 'four','Five'];
     const className = Math.floor(Math.random()*(5-1)+1)
-
-    function createElem(elem, text, className, id, bg) {
+    function createElem(elem, text, className, id, bg, src) {
         const div = document.createElement(elem);
         div.innerText = text;
         div.className = className;
         div.setAttribute("id", id);
         div.style.backgroundColor = bg
         document.body.appendChild(div);
+        // creating image
+        const img = document.createElement('img')
+        img.setAttribute('src', src)
+        div.appendChild(img)
+        console.log(img)
     }
     // createElem("div", 'This is div', 'container', 'one');
     let color = ['red', 'blue', 'crimson', 'green', 'orange']
     for (let i = 0; i<= nameArr.length; i++){
-        createElem("div", nameArr[Math.floor(Math.random()*(5-1)+1)], 'container', 'one', color[Math.floor(Math.random()*(5-1)+1)]);
-    }    
+        src += "1"
+        createElem("div", nameArr[Math.floor(Math.random()*(5-1)+1)], 'container', 'one', color[Math.floor(Math.random()*(5-1)+1)], src);
+
+        src.slice(0,-2)
+    }   
     document.body.style.backgroundColor = "brown";
     document.body.style.Color = "white";
     
