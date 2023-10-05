@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Drop Down</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* justify-content: center; */
+                gap: 2px;
+            }
+            .container {
+                width: 40%;
+                padding: 20px;
+                color: #fff;
+                background: #212121;
+                display: flex;
+                align-items: baseline;
+                gap: 5px;
+                justify-content: center;
+            }
+            .disabled {
+                display: none;
+                transition: all 1s ease-in-out;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="dropBtn container" id="dropBtn">
+            <h1 class="heading">DropDown</h1>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+        <div id="drop-container" class="drop-container container">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+                assumenda. Praesentium rem, earum quisquam dolor, deserunt neque
+                dolorum similique dicta id doloremque quibusdam eum culpa
+                voluptate maxime, ullam blanditiis repudiandae maiores quam nam
+                enim! Iste maiores dolore vero quisquam id?
+            </p>
+        </div>
+        <script
+            src="https://kit.fontawesome.com/c84f374fbb.js"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+    <script>
+        console.log("hello world");
+        const dropBtn = document.getElementById("dropBtn");
+        const dropContainer = document.getElementById("drop-container");
+
+        dropBtn.addEventListener(
+            "click",
+            () => {
+                console.log("clicked!");
+                if (dropContainer.classList.contains("disabled")) {
+                    dropContainer.classList.remove("disabled");
+                } else {
+                    dropContainer.classList.add("disabled");
+                }
+            },
+            false
+        );
+    </script>
+</html>
