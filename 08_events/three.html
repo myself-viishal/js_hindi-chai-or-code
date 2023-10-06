@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval</title>
+</head>
+
+<body>
+    <button id="start">Start</button>
+    <button id="end">End</button>
+    <div id="container" style="width: 100vw;  "></div>
+</body>
+<script>
+    const start = document.getElementById('start');
+    const end = document.getElementById('end');
+    const container = document.getElementById('container');
+
+    function sayName(name) {
+        let currentContent = container.innerHTML;
+        currentContent = currentContent += name;
+        container.innerHTML = currentContent;
+    }
+    let interval;
+    start.addEventListener('click', function (params) {
+        interval = setInterval(sayName, 100, "vishal")
+    })
+
+    end.addEventListener('click', function () {
+        clearInterval(interval)
+        console.log("ended")
+    })
+</script>
+
+</html>
