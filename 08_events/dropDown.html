@@ -29,9 +29,12 @@
                 gap: 5px;
                 justify-content: center;
             }
+            .container:first-child{
+                cursor: pointer;
+                padding: 5px 20px;
+            }
             .disabled {
                 display: none;
-                transition: all 1s ease-in-out;
             }
         </style>
     </head>
@@ -40,7 +43,7 @@
             <h1 class="heading">DropDown</h1>
             <i class="fa-solid fa-angle-down"></i>
         </div>
-        <div id="drop-container" class="drop-container container">
+        <div id="drop-container" class="drop-container container"
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
                 assumenda. Praesentium rem, earum quisquam dolor, deserunt neque
@@ -63,10 +66,11 @@
             "click",
             () => {
                 console.log("clicked!");
-                if (dropContainer.classList.contains("disabled")) {
-                    dropContainer.classList.remove("disabled");
+                if (dropContainer.classList.contains('disabled')) {
+                    console.log("okkkkk");
+                    dropContainer.classList.remove('disabled')
                 } else {
-                    dropContainer.classList.add("disabled");
+                    dropContainer.classList.add('disabled')
                 }
             },
             false
