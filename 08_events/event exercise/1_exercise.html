@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image</title>
+    <style>
+        .container{
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%,-50%);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="new-img">New Image</button>
+    <button id="clear-img">Clear Image</button>
+    <div class="container">
+        <img id="img"  alt="This is a image"></img>
+    </div>
+</body>
+<script>
+    const newImg = document.getElementById('new-img')
+    const clearImg = document.getElementById('clear-img')
+    const img = document.getElementById('img')
+    const auto = document.getElementById('auto')
+
+    function imgSrc() {
+        const randomSeed = Math.floor(Math.random() * 1000);
+        console.log(randomSeed)
+        return `https://picsum.photos/500?random=${randomSeed}`;
+    }
+
+    newImg.addEventListener('click', function(){
+        img.setAttribute('src',imgSrc())
+        newImg.setAttribute('disabled','')
+        clearImg.removeAttribute('disabled','')
+    })
+    clearImg.addEventListener('click', function(){
+        img.removeAttribute('src')
+        clearImg.setAttribute('disabled','')
+        newImg.removeAttribute('disabled','')
+    })
+
+    img.addEventListener('mouseover', function(){
+        let interval = setInterval(()=>{
+            console.log("it works")
+            img.setAttribute('src',imgSrc())
+        },500)
+    })
+
+</script>
+</html>
