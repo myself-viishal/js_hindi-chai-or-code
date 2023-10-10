@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    height: 96vh;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.main {
+    width: 50%;
+    height: 300px;
+    margin: 0 auto;
+    background-color: red;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    -webkit-box-shadow: 0px 0px 11px 0px rgba(62, 168, 234, 1);
+    -moz-box-shadow: 0px 0px 11px 0px rgba(62, 168, 234, 1);
+    box-shadow: 0px 0px 11px 0px rgba(62, 168, 234, 1);
+}
+.img {
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    -o-object-fit: cover;
+    -o-object-position: center;
+}
+.btn-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn {
+    padding: 10px 20px;
+    font-size: 30px;
+    transition: all 0.4s ease-in-out;
+    color: #3ea8ea;
+}
+.btn:hover {
+    color: #287cb1;
+    background-color: #9dcdeb70;
+    cursor: pointer;
+}
+.btn-active {
+    scale: 1.2;
+}
+
+/*! ---------------------Tooltip--------------------------- */
+
+.btn:first-child:hover::after {
+    content: "Previous";
+    position: absolute;
+    font-size: 10px;
+    transform: translate(-90px, -5px);
+    color: black;
+    /*background: transparent(10%), #d1d1d1;*/
+    /*border: 0.5px solid black;*/
+    padding: 2px 5px;
+}
+.btn:last-child:hover:after {
+    content: "Next";
+    position: absolute;
+    font-size: 10px;
+    transform: translate(-5px, -5px);
+    color: black;
+    /*background: transparent(10%), #d1d1d1;*/
+    /*border: 0.5px solid black;*/
+    padding: 2px 5px;
+}
+
+@media only screen and (min-width: 670px) and (max-width: 835px) {
+    .main {
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 670px) {
+    .main {
+        width: 90%;
+    }
+}
