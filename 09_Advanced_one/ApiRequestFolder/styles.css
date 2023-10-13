@@ -55,8 +55,9 @@ body::-webkit-scrollbar {
     align-items: center;
     border-radius: 15px;
     background-color: var(--white);
+    filter: drop-shadow(2px 4px 6px black);
+    z-index: 2;
 }
-
 /** Header BG **/
 .header-bg {
     width: 100%;
@@ -137,7 +138,9 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #ffffff7c;
 }
+
 /** input  */
 .input-group {
     display: flex;
