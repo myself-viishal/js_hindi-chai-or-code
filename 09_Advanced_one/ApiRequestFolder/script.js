@@ -36,7 +36,6 @@ btn.addEventListener(
         let repoOfInput = document.querySelector("#repoOf");
         let repoOf = repoOfInput.value;
         getApi(repoOf);
-
         repoOfInput.value = "";
         console.log("worked");
     },
