@@ -131,7 +131,12 @@ hr {
         margin-top: 9.3rem;
     }
 }
-
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
 #nav-bar {
     padding: 5px;
     width: 100%;
@@ -174,6 +179,20 @@ hr {
     background-color: #5e5dcd;
 }
 
+.btn2 {
+    min-height: 50px;
+    padding: 0.9em 1em;
+    border: none;
+    border-radius: 6px;
+    background-color: #5e4dcd;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.btn2:hover {
+    background-color: #5e5dcd;
+}
 .input:focus,
 .input:focus-visible {
     border-color: #3898ec;
